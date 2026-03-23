@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a192f;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #112240;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background: #ffbe0b;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.fish-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #112240;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020c1b;
+}
