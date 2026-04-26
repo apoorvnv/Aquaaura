@@ -76,7 +76,8 @@ Each fish is displayed with:
 2. Navigate into the project folder:
 
    ```bash
-   cd aqua-aura
+   cd Aquaaura
+
    ```
 
 3. Open `index.html` in your browser
