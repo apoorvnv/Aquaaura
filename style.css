@@ -5,27 +5,153 @@ body {
     color: white;
 }
 
+/* HEADER */
 header {
     text-align: center;
     padding: 20px;
     background: #112240;
 }
 
+/* HERO SECTION (ANIMATED + GLASS + BACKGROUND) */
 .hero {
+    position: relative;
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #0077b6, #00b4d8);
+    padding: 120px 20px;
+    overflow: hidden;
+    color: white;
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* GLASS EFFECT CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-subtext {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* HIGHLIGHTS */
+.hero-highlights {
+    margin: 20px 0;
+}
+
+.hero-highlights span {
+    margin: 5px;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    font-size: 14px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    margin-top: 20px;
 }
 
 .hero button {
     padding: 10px 20px;
     border: none;
     background: #ffbe0b;
-    cursor: pointer;
-    font-size: 16px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
 }
 
+.hero button:hover {
+    background: #ffd60a;
+}
+
+.secondary-btn {
+    margin-left: 10px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* BUBBLES ANIMATION */
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+/* Bubble variations */
+.bubbles span:nth-child(1) { left: 10%; animation-duration: 8s; }
+.bubbles span:nth-child(2) { left: 30%; animation-duration: 10s; width: 15px; height: 15px; }
+.bubbles span:nth-child(3) { left: 50%; animation-duration: 12s; }
+.bubbles span:nth-child(4) { left: 70%; animation-duration: 9s; }
+.bubbles span:nth-child(5) { left: 90%; animation-duration: 11s; }
+
+/* ANIMATIONS */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FISH SECTION */
 .fish-container {
     padding: 40px;
     text-align: center;
@@ -37,6 +163,7 @@ header {
     gap: 20px;
 }
 
+/* CARD */
 .card {
     background: #112240;
     border-radius: 10px;
@@ -46,23 +173,18 @@ header {
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    display: block;
 }
 
 .card:hover {
     transform: scale(1.05);
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: #020c1b;
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
 }
